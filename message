@@ -1,0 +1,443 @@
+import 'package:analitica/shared/theme/color.dart';
+import 'package:flutter/material.dart';
+//theme
+//final analiPincka= "";
+final appTheme = (AppColorSystem color) => ThemeData(
+    primarySwatch: Colors.pink,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    primaryColor: Color(0xFFFF2D85),
+    primaryColorLight: Color(0xFFFF2D85),
+    backgroundColor: Colors.white,
+    scaffoldBackgroundColor: Colors.white,
+    indicatorColor: Color(0xFFFF2D85),
+    colorScheme: ColorScheme(
+      primary: color.annelies.regular,
+      primaryContainer: Color(0xFFA72CA0),
+      secondary: Color(0xFFFEFFFF), // ?
+      secondaryContainer: Color.fromRGBO(254, 255, 255, 1), // ?
+      surface: color.surface.primary,
+      background: color.grey.ultraLight,
+      error: Color(0xFFE70D0D), // ?
+      onPrimary: Color(0xFFFEFFFF),
+      onSecondary: Color(0xFFFEFFFF),
+      onSurface: color.onSurface.primary,
+      onBackground: color.grey.medium,
+      onError: Color(0xFFFEFFFF),
+      brightness: Brightness.light,
+      shadow: color.onSurface.primary,
+    ),
+    fontFamily: "OpenSans",
+    textTheme: TextTheme(
+      // displayLarge: TextStyle(
+      //     height: 1.12,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 57.0,
+      //     fontWeight: FontWeight.w400,
+      //     color: color.onSurface.primary,
+      //   ),
+      // displayMedium: TextStyle(
+      //     height: 1.16,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 45.0,
+      //     fontWeight: FontWeight.w400,
+      //     color: color.onSurface.primary,
+      //   ),
+      // displaySmall: TextStyle(
+      //     height: 1.22,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 36.0,
+      //     fontWeight: FontWeight.w400,
+      //     color: color.onSurface.primary,
+      //   ),
+      // headlineLarge: TextStyle(
+      //     height: 1.25,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 32.0,
+      //     fontWeight: FontWeight.w700,
+      //     color: color.onSurface.primary,
+      //   ),
+      // headlineMedium: TextStyle(
+      //     height: 1.29,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 28.0,
+      //     fontWeight: FontWeight.w700,
+      //     color: color.onSurface.primary,
+      //   ),
+      // headlineSmall: TextStyle(
+      //     height: 1.33,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 24.0,
+      //     fontWeight: FontWeight.w700,
+      //     color: color.onSurface.primary,
+      //   ),
+      // titleLarge: TextStyle(
+      //     height: 1.27,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 22.0,
+      //     fontWeight: FontWeight.w700,
+      //     color: color.onSurface.primary,
+      //   ),
+      // titleMedium: TextStyle(
+      //     height: 1.5,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 16.0,
+      //     fontWeight: FontWeight.w600,
+      //     color: color.onSurface.primary,
+      //   ),
+      // titleSmall: TextStyle(
+      //     height: 1.43,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 14.0,
+      //     fontWeight: FontWeight.w600,
+      //     color: color.onSurface.primary,
+      //   ),
+      // bodyLarge: TextStyle(
+      //     height: 1.5,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 16.0,
+      //     fontWeight: FontWeight.w400,
+      //     color: color.onSurface.primary,
+      //   ),
+      // bodyMedium: TextStyle(
+      //     height: 1.43,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 14.0,
+      //     fontWeight: FontWeight.w400,
+      //     color: color.onSurface.primary,
+      //   ),
+      // bodySmall: TextStyle(
+      //     height: 1.33,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 12.0,
+      //     fontWeight: FontWeight.w400,
+      //     color: color.onSurface.primary,
+      //   ),
+      // labelLarge: TextStyle(
+      //     height: 1.43,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 14.0,
+      //     fontWeight: FontWeight.w600,
+      //     color: color.onSurface.primary,
+      //   ),
+      // labelMedium: TextStyle(
+      //     height: 1.44,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 12.0,
+      //     fontWeight: FontWeight.w600,
+      //     color: color.onSurface.primary,
+      //   ),
+      // labelSmall: TextStyle(
+      //     height: 1.2,
+      //     fontFamily: "OpenSans",
+      //     fontSize: 10.0,
+      //     fontWeight: FontWeight.w600,
+      //     color: color.onSurface.primary,
+      //   ),
+      headline1: TextStyle(
+          height: 1.1,
+          fontFamily: "OpenSans",
+          fontSize: 40.0,
+          fontWeight: FontWeight.bold,
+          color: color.onSurface.primary,
+        ),
+      headline2: TextStyle(
+          height: 1.2,
+          fontFamily: "OpenSans",
+          fontSize: 32.0,
+          fontWeight: FontWeight.bold,
+          color: color.onSurface.primary,
+        ),
+      headline3: TextStyle(
+          height: 1.2,
+          fontFamily: "OpenSans",
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+          color: color.onSurface.primary,
+        ),
+      headline4: TextStyle(
+          height: 1.4,
+          fontFamily: "OpenSans",
+          fontSize: 20.0,
+          fontWeight: FontWeight.w600,
+          color: color.onSurface.primary,
+        ),
+      headline5: TextStyle(
+          height: 1.4,
+          fontFamily: "OpenSans",
+          fontSize: 16.0,
+          fontWeight: FontWeight.w600,
+          color: color.onSurface.primary,
+        ),
+      headline6: TextStyle(
+          height: 1.4,
+          fontFamily: "OpenSans",
+          fontSize: 14.0,
+          fontWeight: FontWeight.w600,
+          color: color.onSurface.primary,
+        ),
+      button: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 14.0,
+          fontWeight: FontWeight.bold,
+          color: color.onSurface.primary,
+        ),
+      bodyText1: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 14.0,
+          fontWeight: FontWeight.normal,
+          color: color.onSurface.primary,
+        ),
+      bodyText2: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 12.0,
+          fontWeight: FontWeight.normal,
+          color: color.onSurface.primary,
+        ),
+      subtitle1: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 10.0,
+          fontWeight: FontWeight.normal,
+          color: color.onSurface.primary,
+        ),
+      subtitle2: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 8.0,
+          fontWeight: FontWeight.w600,
+          color: color.onSurface.primary,
+        ),
+      caption: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 8.0,
+          fontWeight: FontWeight.bold,
+          color: color.onSurface.primary,
+        ),
+      overline: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 8.0,
+          fontWeight: FontWeight.normal,
+          color: color.onSurface.primary,
+        ),
+    ),
+    tabBarTheme:TabBarTheme(
+      indicator: null,
+      indicatorSize: null,
+      labelColor: Color(0xFF121212),
+      labelPadding: null,
+      labelStyle: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 16.0,
+          fontWeight: FontWeight.w600,),
+      unselectedLabelColor: Color(0xFF8E8E93),
+      unselectedLabelStyle: TextStyle(
+          fontFamily: "OpenSans",
+          fontSize: 16.0,
+          fontWeight: FontWeight.w600,),
+    )
+    );
+
+// final appThemeDark = ThemeData(
+//     primarySwatch: Colors.pink,
+//     visualDensity: VisualDensity.adaptivePlatformDensity,
+//     primaryColor: Color(0xFFFF2D85),
+//     primaryColorLight: Color(0xFFFF2D85),
+//     backgroundColor: Colors.white,
+//     scaffoldBackgroundColor: Colors.white,
+//     colorScheme: ColorScheme(
+//       primary: Color(0xFFFF2D85),
+//       primaryContainer: Color(0xFFFF2D85),
+//       secondary: Color(0xFF121212), // ?
+//       secondaryContainer: Color(0xFF494949), // ?
+//       surface: Color(0xFF1B1B1B),
+//       background: Color(0xFF8E8E93),
+//       error: Color(0xFFE70D0D), // ?
+//       onPrimary: Color(0xFFFEFFFF),
+//       onSecondary: Color(0xFFFEFFFF),
+//       onSurface: Color(0xFFFEFFFF),
+//       onBackground: Color(0xFFF7F7F7),
+//       onError: Color(0xFFFEFFFF),
+//       brightness: Brightness.dark,
+//     ),
+//     fontFamily: "OpenSans",
+//     textTheme: TextTheme(
+//       headline1: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 40.0, fontWeight: FontWeight.bold),
+//       headline2: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 32.0, fontWeight: FontWeight.bold),
+//       headline3: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 24.0, fontWeight: FontWeight.bold),
+//       headline4: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 20.0, fontWeight: FontWeight.w600),
+//       headline5: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 16.0, fontWeight: FontWeight.w600),
+//       headline6: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 14.0, fontWeight: FontWeight.w600),
+//       button: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 14.0, fontWeight: FontWeight.bold),
+//       bodyText1: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 14.0,
+//           fontWeight: FontWeight.normal),
+//       bodyText2: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 12.0,
+//           fontWeight: FontWeight.normal),
+//       subtitle1: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 10.0,
+//           fontWeight: FontWeight.normal),
+//       subtitle2: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 8.0, fontWeight: FontWeight.w600),
+//       caption: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 8.0, fontWeight: FontWeight.bold),
+//       overline: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 8.0, fontWeight: FontWeight.normal),
+//     ));
+
+// final appThemeGrey = ThemeData(
+//     primarySwatch: Colors.pink,
+//     visualDensity: VisualDensity.adaptivePlatformDensity,
+//     primaryColor: Color(0xFFFF2D85),
+//     primaryColorLight: Color(0xFFFF2D85),
+//     backgroundColor: Colors.white,
+//     scaffoldBackgroundColor: Colors.white,
+//     colorScheme: ColorScheme(
+//       primary: Color(0xFFFF2D85),
+//       primaryContainer: Color(0xFFFF2D85),
+//       secondary: Color(0xFF373737), // ?
+//       secondaryContainer:Color(0xFF8E8E93) , // ?
+//       surface: Color(0xFF494949),
+//       background: Color(0xFF8E8E93),
+//       error: Color(0xFFE70D0D), // ?
+//       onPrimary: Color(0xFFFEFFFF),
+//       onSecondary: Color(0xFFFEFFFF),
+//       onSurface: Color(0xFFFEFFFF),
+//       onBackground: Color(0xFFF7F7F7),
+//       onError: Color(0xFFFEFFFF),
+//       brightness: Brightness.dark,
+//     ),
+//     fontFamily: "OpenSans",
+//     textTheme: TextTheme(
+//       headline1: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 40.0, fontWeight: FontWeight.bold),
+//       headline2: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 32.0, fontWeight: FontWeight.bold),
+//       headline3: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 24.0, fontWeight: FontWeight.bold),
+//       headline4: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 20.0, fontWeight: FontWeight.w600),
+//       headline5: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 16.0, fontWeight: FontWeight.w600),
+//       headline6: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 14.0, fontWeight: FontWeight.w600),
+//       button: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 14.0, fontWeight: FontWeight.bold),
+//       bodyText1: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 14.0,
+//           fontWeight: FontWeight.normal),
+//       bodyText2: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 12.0,
+//           fontWeight: FontWeight.normal),
+//       subtitle1: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 10.0,
+//           fontWeight: FontWeight.normal),
+//       subtitle2: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 8.0, fontWeight: FontWeight.w600),
+//       caption: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 8.0, fontWeight: FontWeight.bold),
+//       overline: TextStyle(
+//           fontFamily: "OpenSans", fontSize: 8.0, fontWeight: FontWeight.normal),
+//     ));
+
+// final appThemeColorful = ThemeData(
+//     primarySwatch: Colors.pink,
+//     visualDensity: VisualDensity.adaptivePlatformDensity,
+//     primaryColor: Color(0xFFFF2D85),
+//     primaryColorLight: Color(0xFFFF2D85),
+//     backgroundColor: Colors.white,
+//     scaffoldBackgroundColor: Colors.white,
+//     colorScheme: ColorScheme(
+//       primary: Color(0xFFFF2D85),
+//       primaryContainer: Color(0xFFFF2D85),
+//       secondary: Color(0xFFFF74C6), // ?
+//       secondaryContainer: Color(0xFFFFEBF7), // ?
+//       surface: Color(0xFFFFB8E2),
+//       background: Color(0xFFF7F7F7),
+//       error: Color(0xFFE70D0D), // ?
+//       onPrimary: Color(0xFFFEFFFF),
+//       onSecondary: Color(0xFF121212),
+//       onSurface: Color(0xFF121212),
+//       onBackground: Color(0xFFFF2D85),
+//       onError: Color(0xFFFEFFFF),
+//       brightness: Brightness.light,
+//     ),
+//     fontFamily: "OpenSans",
+//     textTheme: TextTheme(
+//       headline1: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 40.0,
+//           fontWeight: FontWeight.bold,
+//           color: Color(0xFF121212)),
+//       headline2: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 32.0,
+//           fontWeight: FontWeight.bold,
+//           color: Color(0xFF121212)),
+//       headline3: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 24.0,
+//           fontWeight: FontWeight.bold,
+//           color: Color(0xFF121212)),
+//       headline4: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 20.0,
+//           fontWeight: FontWeight.w600,
+//           color: Color(0xFF121212)),
+//       headline5: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 16.0,
+//           fontWeight: FontWeight.w600,
+//           color: Color(0xFF121212)),
+//       headline6: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 14.0,
+//           fontWeight: FontWeight.w600,
+//           color: Color(0xFF121212)),
+//       button: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 14.0,
+//           fontWeight: FontWeight.bold,
+//           color: Color(0xFF121212)),
+//       bodyText1: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 14.0,
+//           fontWeight: FontWeight.normal,
+//           color: Color(0xFF121212)),
+//       bodyText2: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 12.0,
+//           fontWeight: FontWeight.normal,
+//           color: Color(0xFF121212)),
+//       subtitle1: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 10.0,
+//           fontWeight: FontWeight.normal,
+//           color: Color(0xFF121212)),
+//       subtitle2: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 8.0,
+//           fontWeight: FontWeight.w600,
+//           color: Color(0xFF121212)),
+//       caption: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 8.0,
+//           fontWeight: FontWeight.bold,
+//           color: Color(0xFF121212)),
+//       overline: TextStyle(
+//           fontFamily: "OpenSans",
+//           fontSize: 8.0,
+//           fontWeight: FontWeight.normal,
+//           color: Color(0xFF121212)),
+//     ));
